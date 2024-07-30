@@ -9,7 +9,7 @@ SET TempVBSFile=%temp%\~tmpSendKeysTemp.vbs
 IF EXIST "%TempVBSFile%" DEL /F /Q "%TempVBSFile%"
 ECHO Set WshShell = WScript.CreateObject("WScript.Shell") >>"%TempVBSFile%"
 ECHO Wscript.Sleep 900                                    >>"%TempVBSFile%"
-ECHO WshShell.SendKeys "{F11}"                            >>"%TempVBSFile%
+ECHO WshShell.SendKeys "{F11}"                            >>"%TempVBSFile%"
 ECHO Wscript.Sleep 900                                    >>"%TempVBSFile%"
 
 CSCRIPT //nologo "%TempVBSFile%"
@@ -21,17 +21,29 @@ echo .
 echo Pixel Nostalgia updater running...
 echo .
 ping -n 2 127.0.0.1 > nul
-echo Updating Hypermax-Plus-PixN Theme...
 
+echo Updating Hypermax-Plus-PixN Theme...
 cd ..\..\emulationstation\.emulationstation\themes\Hypermax-Plus-PixN
 ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
-ping -n 2 127.0.0.1 > nul
 echo .
-echo Updating Ckau-Book-PixN Theme...
 ping -n 2 127.0.0.1 > nul
+
+echo Updating Ckau-Book-PixN Theme...
 cd ..\ckau-book-PixN
 ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
-
 echo .
 ping -n 2 127.0.0.1 > nul
+
+echo Updating Carbon-PixN Theme...
+cd ..\Carbon-PixN
+..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
+echo .
+ping -n 2 127.0.0.1 > nul
+
+echo Updating Alekfull-ARTFLIX-PixN Theme...
+cd ..\Alekfull-ARTFLIX-PixN
+..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
+echo .
+ping -n 2 127.0.0.1 > nul
+
 exit
