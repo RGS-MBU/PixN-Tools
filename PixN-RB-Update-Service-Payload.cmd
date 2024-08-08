@@ -24,24 +24,40 @@ ping -n 2 127.0.0.1 > nul
 
 echo Updating Hypermax-Plus-PixN Theme...
 cd ..\..\emulationstation\.emulationstation\themes\Hypermax-Plus-PixN
+..\..\..\..\emulators\pixn\PortableGit\cmd\git fetch --all
+..\..\..\..\emulators\pixn\PortableGit\cmd\git reset --hard origin/main
+..\..\..\..\emulators\pixn\PortableGit\cmd\git reset --hard HEAD
+..\..\..\..\emulators\pixn\PortableGit\cmd\git clean -f -d
 ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
 echo .
 ping -n 2 127.0.0.1 > nul
 
 echo Updating Ckau-Book-PixN Theme...
 cd ..\ckau-book-PixN
+..\..\..\..\emulators\pixn\PortableGit\cmd\git fetch --all
+..\..\..\..\emulators\pixn\PortableGit\cmd\git reset --hard origin/main
+..\..\..\..\emulators\pixn\PortableGit\cmd\git reset --hard HEAD
+..\..\..\..\emulators\pixn\PortableGit\cmd\git clean -f -d
 ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
 echo .
 ping -n 2 127.0.0.1 > nul
 
 echo Updating Carbon-PixN Theme...
 cd ..\Carbon-PixN
+..\..\..\..\emulators\pixn\PortableGit\cmd\git fetch --all
+..\..\..\..\emulators\pixn\PortableGit\cmd\git reset --hard origin/main
+..\..\..\..\emulators\pixn\PortableGit\cmd\git reset --hard HEAD
+..\..\..\..\emulators\pixn\PortableGit\cmd\git clean -f -d
 ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
 echo .
 ping -n 2 127.0.0.1 > nul
 
 echo Updating Alekfull-ARTFLIX-PixN Theme...
 cd ..\Alekfull-ARTFLIX-PixN
+..\..\..\..\emulators\pixn\PortableGit\cmd\git fetch --all
+..\..\..\..\emulators\pixn\PortableGit\cmd\git reset --hard origin/main
+..\..\..\..\emulators\pixn\PortableGit\cmd\git reset --hard HEAD
+..\..\..\..\emulators\pixn\PortableGit\cmd\git clean -f -d
 ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
 echo .
 ping -n 2 127.0.0.1 > nul
