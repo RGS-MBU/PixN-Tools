@@ -57,5 +57,8 @@ cd ..\Alekfull-ARTFLIX-PixN
 echo .
 ping -n 2 127.0.0.1 > nul
 
+echo .
+echo All done, once this script closes, please restart RetroBat for any changes to take affect... :)
+ping -n 5 127.0.0.1 > nul
 
 exit
