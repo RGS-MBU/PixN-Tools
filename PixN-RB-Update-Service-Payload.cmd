@@ -19,8 +19,19 @@ type ASCII.txt
 
 echo .
 echo Pixel Nostalgia updater running...
+echo Version 1.01
 echo .
 ping -n 2 127.0.0.1 > nul
+
+echo .
+echo Updating system config files...
+echo .
+ping -n 2 127.0.0.1 > nul
+..\..\emulators\pixn\PortableGit\cmd\git clone https://github.com/RGS-MBU/emulationstation.git
+move /Y ".\emulationstation\.emulationstation\*.cfg" ..\..\emulationstation\.emulationstation\
+rmdir /S /Q ".\emulationstation"
+ping -n 2 127.0.0.1 > nul
+echo .
 
 echo Updating Hypermax-Plus-PixN Theme...
 cd ..\..\emulationstation\.emulationstation\themes\Hypermax-Plus-PixN
@@ -45,5 +56,6 @@ cd ..\Alekfull-ARTFLIX-PixN
 ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
 echo .
 ping -n 2 127.0.0.1 > nul
+
 
 exit
