@@ -4,6 +4,7 @@ rem Text color code for Light Green is A
 set "colorCode=A"
 color %colorCode%
 
+rem Script to send the window full screen
 :VBSDynamicBuild
 SET TempVBSFile=%temp%\~tmpSendKeysTemp.vbs
 IF EXIST "%TempVBSFile%" DEL /F /Q "%TempVBSFile%"
@@ -45,17 +46,17 @@ cd ..\ckau-book-PixN
 echo .
 ping -n 2 127.0.0.1 > nul
 
-echo Updating Carbon-PixN Theme...
-cd ..\Carbon-PixN
-..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
-echo .
-ping -n 2 127.0.0.1 > nul
+rem echo Updating Carbon-PixN Theme...
+rem cd ..\Carbon-PixN
+rem ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
+rem echo .
+rem ping -n 2 127.0.0.1 > nul
 
-echo Updating Alekfull-ARTFLIX-PixN Theme...
-cd ..\Alekfull-ARTFLIX-PixN
-..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
-echo .
-ping -n 2 127.0.0.1 > nul
+rem echo Updating Alekfull-ARTFLIX-PixN Theme...
+rem cd ..\Alekfull-ARTFLIX-PixN
+rem ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
+rem echo .
+rem ping -n 2 127.0.0.1 > nul
 
 echo .
 echo All done, once this script closes, please restart RetroBat for any changes to take effect... :)
