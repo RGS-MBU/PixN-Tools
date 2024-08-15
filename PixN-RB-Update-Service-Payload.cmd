@@ -46,11 +46,11 @@ cd ..\ckau-book-PixN
 echo .
 ping -n 2 127.0.0.1 > nul
 
-rem echo Updating Carbon-PixN Theme...
-rem cd ..\Carbon-PixN
-rem ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
-rem echo .
-rem ping -n 2 127.0.0.1 > nul
+echo Updating Carbon-PixN Theme...
+cd ..\Carbon-PixN
+..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
+echo .
+ping -n 2 127.0.0.1 > nul
 
 rem echo Updating Alekfull-ARTFLIX-PixN Theme...
 rem cd ..\Alekfull-ARTFLIX-PixN
