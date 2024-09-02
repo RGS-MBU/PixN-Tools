@@ -42,8 +42,6 @@ move /Y "gamelist.xml" ..\..\system\es_menu\
 ping -n 2 127.0.0.1 > nul
 echo .
 
-pause
-
 echo Updating Hypermax-Plus-PixN Theme...
 cd ..\..\emulationstation\.emulationstation\themes\Hypermax-Plus-PixN
 ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
