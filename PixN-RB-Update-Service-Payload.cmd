@@ -20,7 +20,7 @@ type ASCII.txt
 
 echo .
 echo Pixel Nostalgia updater running...
-echo Version 1.06
+echo Version 1.07
 echo .
 ping -n 2 127.0.0.1 > nul
 
@@ -42,6 +42,31 @@ move /Y "gamelist.xml" ..\..\system\es_menu\
 ping -n 2 127.0.0.1 > nul
 echo .
 
+echo PinballFX and Piball M Fix...
+echo .
+ping -n 2 127.0.0.1 > nul
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Pin-Lic.zip -O Pin-Lic.zip
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/7z.exe -O 7z.exe
+ping -n 2 127.0.0.1 > nul
+7z x Pin-Lic.zip -aoa -o.\
+echo .
+Set PixN-Dir="%cd%"
+md "%localappdata%\PinballFX" >nul 2>&1
+md "%localappdata%\PinballM" >nul 2>&1
+
+xcopy PinballFX "%localappdata%\PinballFX" /S /E /D /I >nul 2>&1
+echo Copying files...
+xcopy PinballM "%localappdata%\PinballM" /S /E /D /I >nul 2>&1
+
+robocopy "PinballFX\Saved\SaveGames" "%localappdata%\PinballFX\Saved\SaveGames" /mir /xd 76561199698107109 /w:0 /r:0 >nul 2>&1
+robocopy "PinballM\Saved\SaveGames" "%localappdata%\PinballM\Saved\SaveGames" /mir /xd 76561199698107109 /w:0 /r:0 >nul 2>&1
+
+rmdir /S /Q "PinballFX" >nul 2>&1
+rmdir /S /Q "PinballM" >nul 2>&1
+
+ping -n 2 127.0.0.1 > nul
+
+echo .
 echo Updating Hypermax-Plus-PixN Theme...
 cd ..\..\emulationstation\.emulationstation\themes\Hypermax-Plus-PixN
 ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
