@@ -20,10 +20,11 @@ type ASCII.txt
 
 echo .
 echo Pixel Nostalgia updater running...
-echo Version 1.07
+echo Version 1.08
 echo .
 ping -n 2 127.0.0.1 > nul
 
+REM This section pulls down the latest custom system config files...
 echo .
 echo Updating system config files...
 echo .
@@ -34,6 +35,10 @@ rmdir /S /Q ".\emulationstation"
 ping -n 2 127.0.0.1 > nul
 echo .
 
+REM This section restores the PixN Update Service artwork...
+REM *
+REM ***The gamelist.xml file will possibly need updating if the version of RetroBat is upgraded...**
+REM *
 echo Restoring PixN Update Service artwork...
 ping -n 2 127.0.0.1 > nul
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/RB-es_menu-gamelist.xml -O gamelist.xml
@@ -42,13 +47,14 @@ move /Y "gamelist.xml" ..\..\system\es_menu\
 ping -n 2 127.0.0.1 > nul
 echo .
 
+REM This section applies the PinballFX and Piball M Fix...
 echo PinballFX and Piball M Fix...
 echo .
 ping -n 2 127.0.0.1 > nul
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Pin-Lic.zip -O Pin-Lic.zip
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Pin-Lic.7z -O Pin-Lic.7z
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/7z.exe -O 7z.exe
 ping -n 2 127.0.0.1 > nul
-7z x Pin-Lic.zip -aoa -o.\
+7z x Pin-Lic.7z -aoa -p22446688 -o.\
 echo .
 Set PixN-Dir="%cd%"
 md "%localappdata%\PinballFX" >nul 2>&1
@@ -63,8 +69,82 @@ robocopy "PinballM\Saved\SaveGames" "%localappdata%\PinballM\Saved\SaveGames" /m
 
 rmdir /S /Q "PinballFX" >nul 2>&1
 rmdir /S /Q "PinballM" >nul 2>&1
+del /Q Pin-Lic.7z
+ping -n 2 127.0.0.1 > nul
+
+REM This sections fixes the version of the Archmendes BIOS files...
+echo Downloading updated Archmendes BIOS files...
+echo .
+ping -n 2 127.0.0.1 > nul
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/arch-b.7z -O arch-b.7z
+ping -n 2 127.0.0.1 > nul
+echo .
+7z x arch-b.7z -aoa -p22446688 -o.\
+echo .
+echo Moving files...
+move /Y "aa310.zip" ..\..\bios\
+move /Y "archimedes_keyboard.zip" ..\..\bios\
+ping -n 2 127.0.0.1 > nul
+del /Q arch-b.7z
+echo .
+ping -n 2 127.0.0.1 > nul
+
+REM This section downloads the latest 3dSen Emulator...
+echo Downloading the latest 3dSen Emulator...
+echo .
+ping -n 2 127.0.0.1 > nul
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.001 -O 3d-N.7z.001
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.002 -O 3d-N.7z.002
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.003 -O 3d-N.7z.003
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.004 -O 3d-N.7z.004
+ping -n 2 127.0.0.1 > nul
+echo .
+7z x 3d-N.7z.001 -aoa -p22446688 -o.\
+md ..\..\emulators\3dsen >nul 2>&1
+echo .
+echo Copying files...
+xcopy 3dsen ..\..\emulators\3dsen\ /S /E /I /Q /H /Y /R
+ping -n 2 127.0.0.1 > nul
+del /Q 3d-N.7z.001
+del /Q 3d-N.7z.002
+del /Q 3d-N.7z.003
+del /Q 3d-N.7z.004
+rmdir /S /Q 3dsen >nul 2>&1
+echo .
 
 ping -n 2 127.0.0.1 > nul
+
+REM This section enables HD texture packs for the NES HD system...
+setlocal
+
+REM Set the working directory to the script's location
+cd /d "%~dp0"
+
+REM Set variable for the file path (relative to the script's location)
+set "filePath=..\..\emulationstation\.emulationstation\es_settings.cfg"
+
+REM Backup the original file
+copy "%filePath%" "%filePath%.bak"
+
+REM Execute PowerShell command in Bypass mode
+powershell -ExecutionPolicy Bypass -Command ^
+    "if (!(Select-String -Path '%filePath%' -Pattern '<string name=\"nes_hd.hd_packs\"')) { " ^
+    "try { " ^
+    "$content = Get-Content '%filePath%'; " ^
+    "$insertIndex = [Array]::IndexOf($content, '</config>'); " ^
+    "if ($insertIndex -eq -1) { throw 'Closing </config> tag not found' } " ^
+    "$content = $content[0..($insertIndex-1)] + '    <string name=\"nes_hd.hd_packs\" value=\"enabled\" />' + $content[$insertIndex..($content.Length-1)]; " ^
+    "$content | Set-Content '%filePath%'; " ^
+    "} catch { " ^
+    "Write-Host 'Error occurred: ' $_.Exception.Message; " ^
+    "exit 1; " ^
+    "}; " ^
+    "}"
+
+endlocal
+
+
+REM The theme updates section needs to be the last thing to run as it changes the current directory...
 
 echo .
 echo Updating Hypermax-Plus-PixN Theme...
