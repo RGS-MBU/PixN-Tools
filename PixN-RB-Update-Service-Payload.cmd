@@ -115,34 +115,33 @@ echo .
 ping -n 2 127.0.0.1 > nul
 
 REM This section enables HD texture packs for the NES HD system...
-REM setlocal
+setlocal
 
 REM Set the working directory to the script's location
 REM cd /d "%~dp0"
 
 REM Set variable for the file path (relative to the script's location)
-REM set "filePath=..\..\emulationstation\.emulationstation\es_settings.cfg"
+set "filePath=..\..\emulationstation\.emulationstation\es_settings.cfg"
 
 REM Backup the original file
-REM copy "%filePath%" "%filePath%.bak"
+copy "%filePath%" "%filePath%.bak"
 
-REM Execute PowerShell command in Bypass mode
-REM powershell -ExecutionPolicy Bypass -Command ^
-REM     "if (!(Select-String -Path '%filePath%' -Pattern '<string name=\"nes_hd.hd_packs\"')) { " ^
-REM     "try { " ^
-REM     "$content = Get-Content '%filePath%'; " ^
-REM     "$insertIndex = [Array]::IndexOf($content, '</config>'); " ^
-REM     "if ($insertIndex -eq -1) { throw 'Closing </config> tag not found' } " ^
-REM     "$content = $content[0..($insertIndex-1)] + '    <string name=\"nes_hd.hd_packs\" value=\"enabled\" />' + $content[$insertIndex..($content.Length-1)]; " ^
-REM     "$content | Set-Content '%filePath%'; " ^
-REM     "} catch { " ^
-REM     "Write-Host 'Error occurred: ' $_.Exception.Message; " ^
-REM     "exit 1; " ^
-REM     "}; " ^
-REM     "}"
+Execute PowerShell command in Bypass mode
+powershell -ExecutionPolicy Bypass -Command ^
+    "if (!(Select-String -Path '%filePath%' -Pattern '<string name=\"nes_hd.hd_packs\"')) { " ^
+    "try { " ^
+    "$content = Get-Content '%filePath%'; " ^
+    "$insertIndex = [Array]::IndexOf($content, '</config>'); " ^
+    "if ($insertIndex -eq -1) { throw 'Closing </config> tag not found' } " ^
+    "$content = $content[0..($insertIndex-1)] + '    <string name=\"nes_hd.hd_packs\" value=\"enabled\" />' + $content[$insertIndex..($content.Length-1)]; " ^
+    "$content | Set-Content '%filePath%'; " ^
+    "} catch { " ^
+    "Write-Host 'Error occurred: ' $_.Exception.Message; " ^
+    "exit 1; " ^
+    "}; " ^
+    "}"
 
-REM endlocal
-
+endlocal
 
 REM The theme updates section needs to be the last thing to run as it changes the current directory...
 
