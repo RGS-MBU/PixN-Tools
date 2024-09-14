@@ -126,7 +126,7 @@ set "filePath=..\..\emulationstation\.emulationstation\es_settings.cfg"
 REM Backup the original file
 copy "%filePath%" "%filePath%.bak"
 
-Execute PowerShell command in Bypass mode
+REM Execute PowerShell command in Bypass mode
 powershell -ExecutionPolicy Bypass -Command ^
     "if (!(Select-String -Path '%filePath%' -Pattern '<string name=\"nes_hd.hd_packs\"')) { " ^
     "try { " ^
