@@ -64,8 +64,8 @@ xcopy PinballFX "%localappdata%\PinballFX" /S /E /D /I >nul 2>&1
 echo Copying files...
 xcopy PinballM "%localappdata%\PinballM" /S /E /D /I >nul 2>&1
 
-robocopy "PinballFX\Saved\SaveGames" "%localappdata%\PinballFX\Saved\SaveGames" /mir /xd 76561199698107109 /w:0 /r:0 >nul 2>&1
-robocopy "PinballM\Saved\SaveGames" "%localappdata%\PinballM\Saved\SaveGames" /mir /xd 76561199698107109 /w:0 /r:0 >nul 2>&1
+robocopy "PinballFX\Saved\SaveGames" "%localappdata%\PinballFX\Saved\SaveGames" /mir /xd 76561197981264163 /w:0 /r:0 >nul 2>&1
+robocopy "PinballM\Saved\SaveGames" "%localappdata%\PinballM\Saved\SaveGames" /mir /xd 76561197981264163 /w:0 /r:0 >nul 2>&1
 
 rmdir /S /Q "PinballFX" >nul 2>&1
 rmdir /S /Q "PinballM" >nul 2>&1
