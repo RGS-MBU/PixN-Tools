@@ -56,7 +56,7 @@ wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/7z.exe -O 7z.exe
 ping -n 2 127.0.0.1 > nul
 7z x Pin-Lic.7z -aoa -p22446688 -o.\
 echo .
-Set PixN-Dir="%cd%"
+REM Set PixN-Dir="%cd%"
 md "%localappdata%\PinballFX" >nul 2>&1
 md "%localappdata%\PinballM" >nul 2>&1
 
