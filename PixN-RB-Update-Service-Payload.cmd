@@ -72,6 +72,7 @@ rmdir /S /Q "PinballFX"
 rmdir /S /Q "PinballM"
 del /Q Pin-Lic.7z
 ping -n 2 127.0.0.1 > nul
+@echo off
 
 REM This sections fixes the version of the Archmendes BIOS files...
 echo Downloading updated Archmendes BIOS files...
