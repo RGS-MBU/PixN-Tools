@@ -55,20 +55,21 @@ wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Pin-Lic.7z -O Pin
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/7z.exe -O 7z.exe
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/7z.dll -O 7z.dll
 ping -n 2 127.0.0.1 > nul
+@echo on
 7z x Pin-Lic.7z -aoa -p22446688 -o.\
 echo .
-md "%localappdata%\PinballFX" >nul 2>&1
-md "%localappdata%\PinballM" >nul 2>&1
+md "%localappdata%\PinballFX"
+md "%localappdata%\PinballM"
 
-xcopy PinballFX "%localappdata%\PinballFX" /S /E /D /I >nul 2>&1
+xcopy PinballFX "%localappdata%\PinballFX" /S /E /D /I
 echo Copying files...
-xcopy PinballM "%localappdata%\PinballM" /S /E /D /I >nul 2>&1
+xcopy PinballM "%localappdata%\PinballM" /S /E /D /I
 
-robocopy "PinballFX\Saved\SaveGames" "%localappdata%\PinballFX\Saved\SaveGames" /mir /xd 76561197981264163 /w:0 /r:0 >nul 2>&1
-robocopy "PinballM\Saved\SaveGames" "%localappdata%\PinballM\Saved\SaveGames" /mir /xd 76561197981264163 /w:0 /r:0 >nul 2>&1
+robocopy "PinballFX\Saved\SaveGames" "%localappdata%\PinballFX\Saved\SaveGames" /mir /xd 76561197981264163 /w:0 /r:0
+robocopy "PinballM\Saved\SaveGames" "%localappdata%\PinballM\Saved\SaveGames" /mir /xd 76561197981264163 /w:0 /r:0
 
-rmdir /S /Q "PinballFX" >nul 2>&1
-rmdir /S /Q "PinballM" >nul 2>&1
+rmdir /S /Q "PinballFX"
+rmdir /S /Q "PinballM"
 del /Q Pin-Lic.7z
 ping -n 2 127.0.0.1 > nul
 
