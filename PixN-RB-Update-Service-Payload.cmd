@@ -74,6 +74,20 @@ del /Q Pin-Lic.7z
 ping -n 2 127.0.0.1 > nul
 @echo off
 
+REM This section updates the Radio stations...
+echo Radio Stations Update...
+echo .
+ping -n 2 127.0.0.1 > nul
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.001 -O radio.7z.001
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.002 -O radio.7z.002
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.003 -O radio.7z.003
+ping -n 2 127.0.0.1 > nul
+7z x radio.7z.001 -aoa -p22446688 -o..\..\roms\radio\
+echo .
+del /Q radio.7z.001
+del /Q radio.7z.002
+del /Q radio.7z.003
+
 REM This sections fixes the version of the Archmendes BIOS files...
 echo Downloading updated Archmendes BIOS files...
 echo .
