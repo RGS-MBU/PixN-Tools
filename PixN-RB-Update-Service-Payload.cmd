@@ -55,7 +55,7 @@ wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Pin-Lic.7z -O Pin
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/7z.exe -O 7z.exe
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/7z.dll -O 7z.dll
 ping -n 2 127.0.0.1 > nul
-@echo on
+REM @echo on
 7z x Pin-Lic.7z -aoa -p22446688 -o.\
 echo .
 md "%localappdata%\PinballFX"
@@ -72,7 +72,7 @@ rmdir /S /Q "PinballFX"
 rmdir /S /Q "PinballM"
 del /Q Pin-Lic.7z
 ping -n 2 127.0.0.1 > nul
-@echo off
+REM @echo off
 
 REM This section updates the Radio stations...
 echo Radio Stations Update...
