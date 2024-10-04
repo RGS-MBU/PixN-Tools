@@ -161,6 +161,15 @@ endlocal
 
 REM The theme updates section needs to be the last thing to run as it changes the current directory...
 
+REM IF EXIST "Takeown-Run" goto SKIP
+REM cd ..\..\emulationstation\.emulationstation\themes
+REM takeown /F Carbon-PixN /R /D Y
+REM takeown /F ckau-book-PixN /R /D Y
+REM takeown /F Hypermax-Plus-PixN /R /D Y
+REM cd ..\..\..\emulators\pixn
+REM echo Takeown-Run > Takeown-Run
+REM :skip
+
 echo .
 echo Updating Hypermax-Plus-PixN Theme...
 cd ..\..\emulationstation\.emulationstation\themes\Hypermax-Plus-PixN
