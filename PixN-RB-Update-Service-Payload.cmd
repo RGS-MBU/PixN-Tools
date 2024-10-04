@@ -171,6 +171,19 @@ REM echo Takeown-Run > Takeown-Run
 REM :skip
 
 echo .
+echo Applying git config...
+del /Q "Full Download - Hypermax Plus PixN.bat"
+del /Q "Full Download - Alekfull-ARTFLIX-PixN.bat"
+del /Q "Full Download - Carbon-PixN.bat"
+del /Q "Full Download - Ckau Book PixN.bat"
+wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Hypermax Plus PixN.bat" -O "Full Download - Hypermax Plus PixN.bat"
+wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Alekfull-ARTFLIX-PixN.bat" -O "Full Download - Alekfull-ARTFLIX-PixN.bat"
+wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Carbon-PixN.bat" -O "Full Download - Carbon-PixN.bat"
+wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Ckau Book PixN.bat" -O "Full Download - Ckau Book PixN.bat"
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/gitconfig -O gitconfig
+move /Y gitconfig .\PortableGit\etc\gitconfig
+
+echo .
 echo Updating Hypermax-Plus-PixN Theme...
 cd ..\..\emulationstation\.emulationstation\themes\Hypermax-Plus-PixN
 ..\..\..\..\emulators\pixn\PortableGit\cmd\git pull
