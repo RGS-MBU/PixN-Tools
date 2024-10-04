@@ -20,7 +20,7 @@ type ASCII.txt
 
 echo .
 echo Pixel Nostalgia updater running...
-echo Version 1.10
+echo Version 1.11
 echo .
 ping -n 2 127.0.0.1 > nul
 
@@ -172,16 +172,16 @@ REM :skip
 
 echo .
 echo Applying git config...
-del /Q "Full Download - Hypermax Plus PixN.bat"
-del /Q "Full Download - Alekfull-ARTFLIX-PixN.bat"
-del /Q "Full Download - Carbon-PixN.bat"
-del /Q "Full Download - Ckau Book PixN.bat"
-wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Hypermax Plus PixN.bat" -O "Full Download - Hypermax Plus PixN.bat"
-wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Alekfull-ARTFLIX-PixN.bat" -O "Full Download - Alekfull-ARTFLIX-PixN.bat"
-wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Carbon-PixN.bat" -O "Full Download - Carbon-PixN.bat"
-wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Ckau Book PixN.bat" -O "Full Download - Ckau Book PixN.bat"
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/gitconfig -O gitconfig
-move /Y gitconfig .\PortableGit\etc\gitconfig
+del /Q "Full Download - Hypermax Plus PixN.bat" >nul 2>&1
+del /Q "Full Download - Alekfull-ARTFLIX-PixN.bat" >nul 2>&1
+del /Q "Full Download - Carbon-PixN.bat" >nul 2>&1
+del /Q "Full Download - Ckau Book PixN.bat" >nul 2>&1
+wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Hypermax Plus PixN.bat" -O "Full Download - Hypermax Plus PixN.bat" >nul 2>&1
+wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Alekfull-ARTFLIX-PixN.bat" -O "Full Download - Alekfull-ARTFLIX-PixN.bat" >nul 2>&1
+wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Carbon-PixN.bat" -O "Full Download - Carbon-PixN.bat" >nul 2>&1
+wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Ckau Book PixN.bat" -O "Full Download - Ckau Book PixN.bat" >nul 2>&1
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/gitconfig -O gitconfig >nul 2>&1
+move /Y gitconfig .\PortableGit\etc\gitconfig >nul 2>&1
 
 echo .
 echo Updating Hypermax-Plus-PixN Theme...
