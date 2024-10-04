@@ -20,7 +20,7 @@ type ASCII.txt
 
 echo .
 echo Pixel Nostalgia updater running...
-echo Version 1.11
+echo Version 1.12
 echo .
 ping -n 2 127.0.0.1 > nul
 
@@ -74,10 +74,11 @@ del /Q Pin-Lic.7z
 ping -n 2 127.0.0.1 > nul
 REM @echo off
 
-REM This section updates the Radio stations...
-echo Radio Stations Update...
+REM This section checks for updated Radio stations...
+echo Checking for updated Radio Stations...
 echo .
 ping -n 2 127.0.0.1 > nul
+IF EXIST "Radio-v1" goto SKIP
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.001 -O radio.7z.001
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.002 -O radio.7z.002
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.003 -O radio.7z.003
@@ -87,6 +88,9 @@ echo .
 del /Q radio.7z.001
 del /Q radio.7z.002
 del /Q radio.7z.003
+
+echo Radio-v1 > Radio-v1
+:skip
 
 REM This sections fixes the version of the Archmendes BIOS files...
 echo Downloading updated Archmendes BIOS files...
@@ -105,10 +109,52 @@ del /Q arch-b.7z
 echo .
 ping -n 2 127.0.0.1 > nul
 
-REM This section downloads the latest 3dSen Emulator...
-echo Downloading the latest 3dSen Emulator...
+REM This section checks for the updated Hypseus Emulator...
+echo Checking for the updated Hypseus Emulator...
 echo .
 ping -n 2 127.0.0.1 > nul
+
+IF EXIST "Hypseus-v1" goto SKIP
+
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.001 -O hypseus.7z.001
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.002 -O hypseus.7z.002
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.003 -O hypseus.7z.003
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.004 -O hypseus.7z.004
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.005 -O hypseus.7z.005
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.006 -O hypseus.7z.006
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.007 -O hypseus.7z.007
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.008 -O hypseus.7z.008
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.009 -O hypseus.7z.009
+ping -n 2 127.0.0.1 > nul
+echo .
+7z x hypseus.7z.001 -aoa -p22446688 -o.\
+md ..\..\emulators\hypseus >nul 2>&1
+echo .
+echo Copying files...
+xcopy hypseus ..\..\emulators\hypseus\ /S /E /I /Q /H /Y /R
+ping -n 2 127.0.0.1 > nul
+del /Q hypseus.7z.001
+del /Q hypseus.7z.002
+del /Q hypseus.7z.003
+del /Q hypseus.7z.004
+del /Q hypseus.7z.005
+del /Q hypseus.7z.006
+del /Q hypseus.7z.007
+del /Q hypseus.7z.008
+del /Q hypseus.7z.009
+rmdir /S /Q hypseus >nul 2>&1
+
+echo Hypseus-v1 > Hypseus-v1
+:skip
+echo .
+
+REM This section checks for the updated 3dSen Emulator...
+echo Checking for the updated 3dSen Emulator...
+echo .
+ping -n 2 127.0.0.1 > nul
+
+IF EXIST "3dSen-v1" goto SKIP
+
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.001 -O 3d-N.7z.001
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.002 -O 3d-N.7z.002
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.003 -O 3d-N.7z.003
@@ -126,8 +172,10 @@ del /Q 3d-N.7z.002
 del /Q 3d-N.7z.003
 del /Q 3d-N.7z.004
 rmdir /S /Q 3dsen >nul 2>&1
-echo .
 
+echo 3dSen-v1 > 3dSen-v1
+:skip
+echo .
 ping -n 2 127.0.0.1 > nul
 
 REM This section enables HD texture packs for the NES HD system...
