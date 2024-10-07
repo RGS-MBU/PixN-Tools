@@ -78,7 +78,7 @@ REM This section checks for updated Radio stations...
 echo Checking for updated Radio Stations...
 echo .
 ping -n 2 127.0.0.1 > nul
-IF EXIST "Radio-v1" goto SKIP
+IF EXIST "Radio-v2" goto SKIP
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.001 -O radio.7z.001
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.002 -O radio.7z.002
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.003 -O radio.7z.003
@@ -89,7 +89,7 @@ del /Q radio.7z.001
 del /Q radio.7z.002
 del /Q radio.7z.003
 
-echo Radio-v1 > Radio-v1
+echo Radio-v2 > Radio-v2
 :skip
 
 REM This sections fixes the version of the Archmendes BIOS files...
