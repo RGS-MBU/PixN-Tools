@@ -19,7 +19,7 @@
 	</game>
 	<game>
 		<path>./pixn-rb-update-service.menu</path>
-		<name>_PixN Update Service_</name>
+		<name>.PixN Update Service.</name>
 		<desc>Script to update the Team Pixel Nostalgia supplied content.</desc>
 		<image>./media/pixn-rb-update-service-logo.png</image>
 		<marquee>./media/pixn-rb-update-service-logo.png</marquee>
