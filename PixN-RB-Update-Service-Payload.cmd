@@ -20,7 +20,7 @@ type ASCII.txt
 
 echo .
 echo Pixel Nostalgia updater running...
-echo Version 1.13
+echo Version 1.14
 echo .
 ping -n 2 127.0.0.1 > nul
 
@@ -174,6 +174,32 @@ del /Q 3d-N.7z.004
 rmdir /S /Q 3dsen >nul 2>&1
 
 echo 3dSen-v1 > 3dSen-v1
+:skip
+echo .
+ping -n 2 127.0.0.1 > nul
+
+REM This section checks for the updated TeknoParrot Emulator...
+echo Checking for the updated TeknoParrot Emulator...
+echo .
+ping -n 2 127.0.0.1 > nul
+
+IF EXIST "TeknoParrot-v1" goto SKIP
+
+del /Q Jj5Uw5Bc*.*
+wget https://pixeldrain.com/api/filesystem/Jj5Uw5Bc
+ren Jj5Uw5Bc teknoparrot_oct2024.7z
+ping -n 2 127.0.0.1 > nul
+echo .
+7z x teknoparrot_oct2024.7z -aoa -p22446688 -o.\
+md ..\..\emulators\teknoparrot >nul 2>&1
+echo .
+echo Copying files...
+xcopy teknoparrot ..\..\emulators\teknoparrot\ /S /E /I /Q /H /Y /R
+ping -n 2 127.0.0.1 > nul
+del /Q teknoparrot_oct2024.7z
+rmdir /S /Q teknoparrot >nul 2>&1
+
+echo TeknoParrot-v1 > TeknoParrot-v1
 :skip
 echo .
 ping -n 2 127.0.0.1 > nul
