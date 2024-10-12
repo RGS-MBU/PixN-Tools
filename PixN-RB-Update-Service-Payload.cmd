@@ -185,7 +185,7 @@ ping -n 2 127.0.0.1 > nul
 
 IF EXIST "TeknoParrot-v1" goto SKIP
 
-del /Q Jj5Uw5Bc*.*
+del /Q Jj5Uw5Bc*.* >nul 2>&1
 wget https://pixeldrain.com/api/filesystem/Jj5Uw5Bc
 ren Jj5Uw5Bc teknoparrot_oct2024.7z
 ping -n 2 127.0.0.1 > nul
