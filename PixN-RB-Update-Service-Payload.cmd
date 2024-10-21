@@ -20,7 +20,7 @@ type ASCII.txt
 
 echo .
 echo Pixel Nostalgia updater running...
-echo Version 1.14
+echo Version 1.15
 echo .
 ping -n 2 127.0.0.1 > nul
 
@@ -32,6 +32,16 @@ ping -n 2 127.0.0.1 > nul
 ..\..\emulators\pixn\PortableGit\cmd\git clone https://github.com/RGS-MBU/emulationstation.git
 move /Y ".\emulationstation\.emulationstation\*.cfg" ..\..\emulationstation\.emulationstation\
 rmdir /S /Q ".\emulationstation"
+ping -n 2 127.0.0.1 > nul
+echo .
+
+REM This section pulls down the latest es-checkversion script...
+echo .
+echo Updating es-checkversion script...
+echo .
+ping -n 2 127.0.0.1 > nul
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/es-checkversion-v6.4.cmd -O es-checkversion.cmd
+move /Y "es-checkversion.cmd" ..\..\emulationstation\
 ping -n 2 127.0.0.1 > nul
 echo .
 
