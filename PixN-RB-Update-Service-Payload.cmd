@@ -58,15 +58,15 @@ ping -n 2 127.0.0.1 > nul
 echo .
 
 REM This section adds the PixN Update Service to the system wheel...
-echo Adds the PixN Update Service to the system wheel...
-echo .
-ping -n 2 127.0.0.1 > nul
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/pixn.7z -O pixn.7z
-ping -n 2 127.0.0.1 > nul
+REM echo Adds the PixN Update Service to the system wheel...
+REM echo .
+REM ping -n 2 127.0.0.1 > nul
+REM wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/pixn.7z -O pixn.7z
+REM ping -n 2 127.0.0.1 > nul
 REM @echo on
-7z x pixn.7z -aoa -p22446688 -o..\..\roms\
-ping -n 2 127.0.0.1 > nul
-echo .
+REM 7z x pixn.7z -aoa -p22446688 -o..\..\roms\
+REM ping -n 2 127.0.0.1 > nul
+REM echo .
 
 REM This section applies the PinballFX and Piball M Fix...
 echo PinballFX and Piball M Fix...
