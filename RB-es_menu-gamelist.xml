@@ -1,4 +1,4 @@
-ï»¿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <gameList>
 	<game>
 		<path>./applewin.menu</path>
@@ -11,23 +11,6 @@
 		<developer>AppleWin Team</developer>
 		<publisher>AppleWin Team</publisher>
 		<genre>Emulator</genre>
-		<playcount />
-		<lastplayed />
-		<gametime />
-		<lang>en</lang>
-		<region>wr</region>
-	</game>
-	<game>
-		<path>./pixn-rb-update-service.menu</path>
-		<name>.PixN Update Service.</name>
-		<desc>Script to update the Team Pixel Nostalgia supplied content.</desc>
-		<image>./media/pixn-rb-update-service-logo.png</image>
-		<marquee>./media/pixn-rb-update-service-logo.png</marquee>
-		<rating>0</rating>
-		<releasedate />
-		<developer>Team Pixel Nostalgia</developer>
-		<publisher>Team Pixel Nostalgia</publisher>
-		<genre>Script</genre>
 		<playcount />
 		<lastplayed />
 		<gametime />
@@ -112,6 +95,23 @@
 		<releasedate />
 		<developer>Cemu Team</developer>
 		<publisher>Cemu Team</publisher>
+		<genre>Emulator</genre>
+		<playcount />
+		<lastplayed />
+		<gametime />
+		<lang>en</lang>
+		<region>wr</region>
+	</game>
+	<game>
+		<path>./cgenius.menu</path>
+		<name>Commander Genius</name>
+		<desc>Run Commander Genius.</desc>
+		<image>./media/cgenius.png</image>
+		<marquee>./media/cgenius.png</marquee>
+		<rating>0</rating>
+		<releasedate />
+		<developer>The Commander Genius Team</developer>
+		<publisher>The Commander Genius Team</publisher>
 		<genre>Emulator</genre>
 		<playcount />
 		<lastplayed />
@@ -331,7 +331,7 @@
 		<marquee>./media/kronos-logo.png</marquee>
 		<rating>0</rating>
 		<releasedate />
-		<developer>FranÃ§ois Caron</developer>
+		<developer>François Caron</developer>
 		<publisher />
 		<genre>Emulator</genre>
 		<playcount />
@@ -378,8 +378,25 @@
 		<desc>Run Magic Engine (PC Engine).</desc>
 		<image>./media/magicengine-logo.png</image>
 		<marquee>./media/magicengine-logo.png</marquee>
-		<developer>David / CÃ©dric Michel</developer>
+		<developer>David / Cédric Michel</developer>
 		<publisher />
+		<genre>Emulator</genre>
+		<playcount />
+		<lastplayed />
+		<gametime />
+		<lang>en</lang>
+		<region>wr</region>
+	</game>
+	<game>
+		<path>./mednafen.menu</path>
+		<name>Mednafen (Multi System Emulator)</name>
+		<desc>Run Mednafen (Multi System Emulator).</desc>
+		<image>./media/mednafen-logo.png</image>
+		<marquee>./media/mednafen-logo.png</marquee>
+		<rating>0</rating>
+		<releasedate />
+		<developer>Mednafen Team</developer>
+		<publisher>Mednafen Team</publisher>
 		<genre>Emulator</genre>
 		<playcount />
 		<lastplayed />
@@ -1266,4 +1283,21 @@
 		<lang>en</lang>
 		<region>wr</region>
 	</game>
+    <game>
+        <path>./pixn-rb-update-service.menu</path>
+        <name>.PixN Update Service.</name>
+        <desc>Script to update the Team Pixel Nostalgia supplied content.</desc>
+        <image>./media/pixn-rb-update-service-logo.png</image>
+        <marquee>./media/pixn-rb-update-service-logo.png</marquee>
+        <rating>0</rating>
+        <releasedate />
+        <developer>Team Pixel Nostalgia</developer>
+        <publisher>Team Pixel Nostalgia</publisher>
+        <genre>Script</genre>
+        <playcount />
+        <lastplayed />
+        <gametime />
+        <lang>en</lang>
+        <region>wr</region>
+    </game>
 </gameList>
