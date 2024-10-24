@@ -57,6 +57,13 @@ move /Y "gamelist.xml" ..\..\system\es_menu\
 ping -n 2 127.0.0.1 > nul
 echo .
 
+REM Download and Call the PowerShell script
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Add-PixNService.ps1 -O Add-PixNService.ps1
+ping -n 2 127.0.0.1 > nul
+powershell -ExecutionPolicy Bypass -File "Add-PixNService.ps1"
+ping -n 2 127.0.0.1 > nul
+echo .
+
 REM This section adds the PixN Update Service to the system wheel...
 REM echo Adds the PixN Update Service to the system wheel...
 REM echo .
@@ -67,6 +74,8 @@ REM @echo on
 REM 7z x pixn.7z -aoa -p22446688 -o..\..\roms\
 REM ping -n 2 127.0.0.1 > nul
 REM echo .
+REM Clean up PixN from System Wheel
+rmdir /S /Q "..\..\roms\pixn" > nul
 
 REM This section applies the PinballFX and Piball M Fix...
 echo PinballFX and Piball M Fix...
