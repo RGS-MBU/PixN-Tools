@@ -256,6 +256,38 @@ echo TeknoParrot-v1 > TeknoParrot-v1
 echo .
 ping -n 2 127.0.0.1 > nul
 
+REM This section checks for the updated Xash3D FWGS Emulator...
+REM echo Checking for the updated Xash3D FWGS Emulator...
+REM echo .
+REM ping -n 2 127.0.0.1 > nul
+
+REM IF EXIST "Xash3D-FWGS-v1" goto SKIP
+
+REM del /Q CXfrB4pN*.* >nul 2>&1
+REM wget https://pixeldrain.com/api/filesystem/CXfrB4pN
+REM ren CXfrB4pN xash3d-fwgs_oct2024.7z
+REM ping -n 2 127.0.0.1 > nul
+REM echo .
+REM 7z x xash3d-fwgs_oct2024.7z -aoa -p22446688 -o.\
+REM md ..\..\emulators\xash3d-fwgs >nul 2>&1
+REM echo .
+REM echo Copying files...
+REM xcopy xash3d-fwgs ..\..\emulators\xash3d-fwgs\ /S /E /I /Q /H /Y /R
+REM ping -n 2 127.0.0.1 > nul
+REM del /Q xash3d-fwgs_oct2024.7z
+REM rmdir /S /Q xash3d-fwgs >nul 2>&1
+
+REM echo Xash3D-FWGS-v1 > Xash3D-FWGS-v1
+REM :skip
+REM echo .
+
+REM This section downloads a tiny file so we can see how many people are using the Update Service...
+del /Q NYcXqrtb*.* >nul 2>&1
+del /Q PixN-Stats >nul 2>&1
+wget https://pixeldrain.com/api/filesystem/NYcXqrtb
+ren CXfrB4pN PixN-Stats
+ping -n 2 127.0.0.1 > nul
+
 REM This section enables HD texture packs for the NES HD system...
 setlocal
 
