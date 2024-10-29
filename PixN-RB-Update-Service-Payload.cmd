@@ -285,7 +285,7 @@ REM This section downloads a tiny file so we can see how many people are using t
 del /Q NYcXqrtb*.* >nul 2>&1
 del /Q PixN-Stats >nul 2>&1
 wget https://pixeldrain.com/api/filesystem/NYcXqrtb
-ren CXfrB4pN PixN-Stats
+ren NYcXqrtb PixN-Stats
 ping -n 2 127.0.0.1 > nul
 
 REM This section enables HD texture packs for the NES HD system...
