@@ -102,7 +102,28 @@ rmdir /S /Q "PinballFX"
 rmdir /S /Q "PinballM"
 del /Q Pin-Lic.7z
 ping -n 2 127.0.0.1 > nul
-REM @echo off
+
+REM This section applies Zaccaria Pinball config...
+REM echo Zaccaria Pinball Config...
+echo .
+ping -n 2 127.0.0.1 > nul
+IF EXIST "ZP-v1" goto SKIP
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/ZP.7z -O ZP.7z
+ping -n 2 127.0.0.1 > nul
+7z x ZP.7z -aoa -p22446688 -o.\
+echo .
+ver | find "XP" > nul
+    if %ERRORLEVEL% == 0 SET PixN-MyDocs=%USERPROFILE%\My Documents
+    if %ERRORLEVEL% == 1 FOR /f "tokens=3" %%x IN ('REG QUERY "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" /v "Personal"') do (set PixN-MyDocs=%%x)
+echo Copying files...
+echo n | copy /-y "Zaccaria_Pinball" "%PixN-MyDocs%\Zaccaria_Pinball"
+ping -n 2 127.0.0.1 > nul
+rmdir /S /Q "Zaccaria_Pinball"
+del /Q ZP.7z
+echo .
+ping -n 1 127.0.0.1 > nul
+echo ZP-v1 > ZP-v1
+:skip
 
 REM This section checks for updated Radio stations...
 echo Checking for updated Radio Stations...
