@@ -75,7 +75,7 @@ REM 7z x pixn.7z -aoa -p22446688 -o..\..\roms\
 REM ping -n 2 127.0.0.1 > nul
 REM echo .
 REM Clean up PixN from System Wheel
-rmdir /S /Q "..\..\roms\pixn" > nul
+rmdir /S /Q "..\..\roms\pixn" >nul 2>&1
 
 REM This section applies the PinballFX and Piball M Fix...
 echo PinballFX and Piball M Fix...
@@ -116,6 +116,7 @@ ver | find "XP" > nul
     if %ERRORLEVEL% == 0 SET PixN-MyDocs=%USERPROFILE%\My Documents
     if %ERRORLEVEL% == 1 FOR /f "tokens=3" %%x IN ('REG QUERY "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" /v "Personal"') do (set PixN-MyDocs=%%x)
 echo Copying files...
+md "%PixN-MyDocs%\Zaccaria_Pinball" >nul 2>&1
 echo n | copy /-y "Zaccaria_Pinball" "%PixN-MyDocs%\Zaccaria_Pinball"
 ping -n 2 127.0.0.1 > nul
 rmdir /S /Q "Zaccaria_Pinball"
