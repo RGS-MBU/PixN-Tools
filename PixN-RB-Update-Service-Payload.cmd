@@ -307,7 +307,7 @@ powershell -ExecutionPolicy Bypass -Command ^
     "$content = Get-Content '%filePath%'; " ^
     "$insertIndex = [Array]::IndexOf($content, '</config>'); " ^
     "if ($insertIndex -eq -1) { throw 'Closing </config> tag not found' } " ^
-    "$content = $content[0..($insertIndex-1)] + '    <string name=\"nes_hd.hd_packs\" value=\"enabled\" />' + $content[$insertIndex..($content.Length-1)]; " ^
+    "$content = $content[0..($insertIndex-1)] + '    <string name=\"nes_hd.hd_packs\" value=\"1\" />' + $content[$insertIndex..($content.Length-1)]; " ^
     "$content | Set-Content '%filePath%'; " ^
     "} catch { " ^
     "Write-Host 'Error occurred: ' $_.Exception.Message; " ^
