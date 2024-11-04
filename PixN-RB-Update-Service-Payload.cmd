@@ -20,7 +20,7 @@ type ASCII.txt
 
 echo .
 echo Pixel Nostalgia updater running...
-echo Version 1.16
+echo Version 1.17
 echo .
 ping -n 2 127.0.0.1 > nul
 
@@ -124,6 +124,20 @@ del /Q ZP.7z
 echo .
 ping -n 1 127.0.0.1 > nul
 echo ZP-v1 > ZP-v1
+:skip
+
+REM This section adds OpenAL32.dll if required...
+echo Checking if OpenAL32.dll is required...
+echo .
+ping -n 2 127.0.0.1 > nul
+IF NOT EXIST ..\..\roms\zaccariapinball\ZaccariaPinball.pc\ goto SKIP
+IF EXIST ..\..\roms\zaccariapinball\ZaccariaPinball.pc\OpenAL32.dll goto SKIP
+
+wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/OpenAL32.dll -O OpenAL32.dll
+ping -n 2 127.0.0.1 > nul
+copy OpenAL32.dll ..\..\roms\zaccariapinball\ZaccariaPinball.pc\
+echo .
+del /Q OpenAL32.dll
 :skip
 
 REM This section checks for updated Radio stations...
