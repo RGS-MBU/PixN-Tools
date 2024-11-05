@@ -249,23 +249,23 @@ echo Checking for the updated TeknoParrot Emulator...
 echo .
 ping -n 2 127.0.0.1 > nul
 
-IF EXIST "TeknoParrot-v1" goto SKIP
+IF EXIST "TeknoParrot-v2" goto SKIP
 
-del /Q Jj5Uw5Bc*.* >nul 2>&1
-wget https://pixeldrain.com/api/filesystem/Jj5Uw5Bc
-ren Jj5Uw5Bc teknoparrot_oct2024.7z
+del /Q vGdcxBNp*.* >nul 2>&1
+wget https://pixeldrain.com/api/filesystem/vGdcxBNp
+ren vGdcxBNp teknoparrot_nov2024.7z
 ping -n 2 127.0.0.1 > nul
 echo .
-7z x teknoparrot_oct2024.7z -aoa -p22446688 -o.\
+7z x teknoparrot_nov2024.7z -aoa -p22446688 -o.\
 md ..\..\emulators\teknoparrot >nul 2>&1
 echo .
 echo Copying files...
 xcopy teknoparrot ..\..\emulators\teknoparrot\ /S /E /I /Q /H /Y /R
 ping -n 2 127.0.0.1 > nul
-del /Q teknoparrot_oct2024.7z
+del /Q teknoparrot_nov2024.7z
 rmdir /S /Q teknoparrot >nul 2>&1
 
-echo TeknoParrot-v1 > TeknoParrot-v1
+echo TeknoParrot-v2 > TeknoParrot-v2
 :skip
 echo .
 ping -n 2 127.0.0.1 > nul
