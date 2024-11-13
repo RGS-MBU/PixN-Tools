@@ -49,13 +49,13 @@ REM This section restores the PixN Update Service artwork...
 REM *
 REM ***The gamelist.xml file will possibly need updating if the version of RetroBat is upgraded...**
 REM *
-echo Restoring PixN Update Service artwork...
-ping -n 2 127.0.0.1 > nul
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/RB-es_menu-gamelist.xml -O gamelist.xml
-ping -n 2 127.0.0.1 > nul
-move /Y "gamelist.xml" ..\..\system\es_menu\
-ping -n 2 127.0.0.1 > nul
-echo .
+REM echo Restoring PixN Update Service artwork...
+REM ping -n 2 127.0.0.1 > nul
+REM wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/RB-es_menu-gamelist.xml -O gamelist.xml
+REM ping -n 2 127.0.0.1 > nul
+REM move /Y "gamelist.xml" ..\..\system\es_menu\
+REM ping -n 2 127.0.0.1 > nul
+REM echo .
 
 REM Download and Call the PowerShell script
 wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Add-PixNService.ps1 -O Add-PixNService.ps1
