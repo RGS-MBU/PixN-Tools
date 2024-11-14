@@ -40,7 +40,7 @@ echo .
 echo Updating es-checkversion script...
 echo .
 ping -n 2 127.0.0.1 > nul
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/es-checkversion-v6.4.cmd -O es-checkversion.cmd
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/es-checkversion-v6.4.cmd -O es-checkversion.cmd
 move /Y "es-checkversion.cmd" ..\..\emulationstation\
 ping -n 2 127.0.0.1 > nul
 echo .
@@ -51,14 +51,14 @@ REM ***The gamelist.xml file will possibly need updating if the version of Retro
 REM *
 REM echo Restoring PixN Update Service artwork...
 REM ping -n 2 127.0.0.1 > nul
-REM wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/RB-es_menu-gamelist.xml -O gamelist.xml
+REM wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/RB-es_menu-gamelist.xml -O gamelist.xml
 REM ping -n 2 127.0.0.1 > nul
 REM move /Y "gamelist.xml" ..\..\system\es_menu\
 REM ping -n 2 127.0.0.1 > nul
 REM echo .
 
 REM Download and Call the PowerShell script
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Add-PixNService.ps1 -O Add-PixNService.ps1
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/Add-PixNService.ps1 -O Add-PixNService.ps1
 ping -n 2 127.0.0.1 > nul
 powershell -ExecutionPolicy Bypass -File "Add-PixNService.ps1"
 ping -n 2 127.0.0.1 > nul
@@ -68,7 +68,7 @@ REM This section adds the PixN Update Service to the system wheel...
 REM echo Adds the PixN Update Service to the system wheel...
 REM echo .
 REM ping -n 2 127.0.0.1 > nul
-REM wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/pixn.7z -O pixn.7z
+REM wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/pixn.7z -O pixn.7z
 REM ping -n 2 127.0.0.1 > nul
 REM @echo on
 REM 7z x pixn.7z -aoa -p22446688 -o..\..\roms\
@@ -81,9 +81,9 @@ REM This section applies the PinballFX and Piball M Fix...
 echo PinballFX and Piball M Fix...
 echo .
 ping -n 2 127.0.0.1 > nul
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Pin-Lic.7z -O Pin-Lic.7z
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/7z.exe -O 7z.exe
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/7z.dll -O 7z.dll
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/Pin-Lic.7z -O Pin-Lic.7z
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/7z.exe -O 7z.exe
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/7z.dll -O 7z.dll
 ping -n 2 127.0.0.1 > nul
 REM @echo on
 7z x Pin-Lic.7z -aoa -p22446688 -o.\
@@ -108,7 +108,7 @@ REM echo Zaccaria Pinball Config...
 echo .
 ping -n 2 127.0.0.1 > nul
 IF EXIST "ZP-v1" goto SKIP
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/ZP.7z -O ZP.7z
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/ZP.7z -O ZP.7z
 ping -n 2 127.0.0.1 > nul
 7z x ZP.7z -aoa -p22446688 -o.\
 echo .
@@ -133,7 +133,7 @@ ping -n 2 127.0.0.1 > nul
 IF NOT EXIST ..\..\roms\zaccariapinball\ZaccariaPinball.pc\ goto SKIP
 IF EXIST ..\..\roms\zaccariapinball\ZaccariaPinball.pc\OpenAL32.dll goto SKIP
 
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/OpenAL32.dll -O OpenAL32.dll
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/OpenAL32.dll -O OpenAL32.dll
 ping -n 2 127.0.0.1 > nul
 copy OpenAL32.dll ..\..\roms\zaccariapinball\ZaccariaPinball.pc\
 echo .
@@ -145,9 +145,9 @@ echo Checking for updated Radio Stations...
 echo .
 ping -n 2 127.0.0.1 > nul
 IF EXIST "Radio-v2" goto SKIP
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.001 -O radio.7z.001
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.002 -O radio.7z.002
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/radio.7z.003 -O radio.7z.003
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/radio.7z.001 -O radio.7z.001
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/radio.7z.002 -O radio.7z.002
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/radio.7z.003 -O radio.7z.003
 ping -n 2 127.0.0.1 > nul
 7z x radio.7z.001 -aoa -p22446688 -o..\..\roms\radio\
 echo .
@@ -162,7 +162,7 @@ REM This sections fixes the version of the Archmendes BIOS files...
 echo Downloading updated Archmendes BIOS files...
 echo .
 ping -n 2 127.0.0.1 > nul
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/arch-b.7z -O arch-b.7z
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/arch-b.7z -O arch-b.7z
 ping -n 2 127.0.0.1 > nul
 echo .
 7z x arch-b.7z -aoa -p22446688 -o.\
@@ -182,15 +182,15 @@ ping -n 2 127.0.0.1 > nul
 
 IF EXIST "Hypseus-v1" goto SKIP
 
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.001 -O hypseus.7z.001
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.002 -O hypseus.7z.002
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.003 -O hypseus.7z.003
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.004 -O hypseus.7z.004
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.005 -O hypseus.7z.005
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.006 -O hypseus.7z.006
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.007 -O hypseus.7z.007
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.008 -O hypseus.7z.008
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/hypseus.7z.009 -O hypseus.7z.009
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/hypseus.7z.001 -O hypseus.7z.001
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/hypseus.7z.002 -O hypseus.7z.002
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/hypseus.7z.003 -O hypseus.7z.003
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/hypseus.7z.004 -O hypseus.7z.004
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/hypseus.7z.005 -O hypseus.7z.005
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/hypseus.7z.006 -O hypseus.7z.006
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/hypseus.7z.007 -O hypseus.7z.007
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/hypseus.7z.008 -O hypseus.7z.008
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/hypseus.7z.009 -O hypseus.7z.009
 ping -n 2 127.0.0.1 > nul
 echo .
 7z x hypseus.7z.001 -aoa -p22446688 -o.\
@@ -221,10 +221,10 @@ ping -n 2 127.0.0.1 > nul
 
 IF EXIST "3dSen-v1" goto SKIP
 
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.001 -O 3d-N.7z.001
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.002 -O 3d-N.7z.002
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.003 -O 3d-N.7z.003
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/3d-N.7z.004 -O 3d-N.7z.004
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/3d-N.7z.001 -O 3d-N.7z.001
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/3d-N.7z.002 -O 3d-N.7z.002
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/3d-N.7z.003 -O 3d-N.7z.003
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/3d-N.7z.004 -O 3d-N.7z.004
 ping -n 2 127.0.0.1 > nul
 echo .
 7z x 3d-N.7z.001 -aoa -p22446688 -o.\
@@ -331,6 +331,32 @@ powershell -ExecutionPolicy Bypass -Command ^
 
 endlocal
 
+REM Creates replace.vbs to update the PixN-RB-Update-Service.cmd file...
+echo Const ForReading = 1 > replace.vbs
+echo Const ForWriting = 2 >> replace.vbs
+echo. >> replace.vbs
+echo. >> replace.vbs
+echo strFileName = Wscript.Arguments(0) >> replace.vbs
+echo strOldText = Wscript.Arguments(1) >> replace.vbs
+echo strNewText = Wscript.Arguments(2) >> replace.vbs
+echo. >> replace.vbs
+echo. >> replace.vbs
+echo Set objFSO = CreateObject("Scripting.FileSystemObject") >> replace.vbs
+echo Set objFile = objFSO.OpenTextFile(strFileName, ForReading) >> replace.vbs
+echo. >> replace.vbs
+echo. >> replace.vbs
+echo strText = objFile.ReadAll >> replace.vbs
+echo objFile.Close >> replace.vbs
+echo strNewText = Replace(strText, strOldText, strNewText) >> replace.vbs
+echo. >> replace.vbs
+echo. >> replace.vbs
+echo objFile.Close >> replace.vbs
+echo Set objFile = objFSO.OpenTextFile(strFileName, ForWriting) >> replace.vbs
+echo objFile.Write strNewText >> replace.vbs
+echo objFile.Close>> replace.vbs
+
+cscript replace.vbs "PixN-RB-Update-Service.cmd" "RGS-MBU/PixN-Tools" "PixelNostalgia/PixN-RB-Update-Service" > NUL
+
 REM The theme updates section needs to be the last thing to run as it changes the current directory...
 
 REM IF EXIST "Takeown-Run" goto SKIP
@@ -348,11 +374,11 @@ del /Q "Full Download - Hypermax Plus PixN.bat" >nul 2>&1
 del /Q "Full Download - Alekfull-ARTFLIX-PixN.bat" >nul 2>&1
 del /Q "Full Download - Carbon-PixN.bat" >nul 2>&1
 del /Q "Full Download - Ckau Book PixN.bat" >nul 2>&1
-wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Hypermax Plus PixN.bat" -O "Full Download - Hypermax Plus PixN.bat" >nul 2>&1
-wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Alekfull-ARTFLIX-PixN.bat" -O "Full Download - Alekfull-ARTFLIX-PixN.bat" >nul 2>&1
-wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Carbon-PixN.bat" -O "Full Download - Carbon-PixN.bat" >nul 2>&1
-wget "https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/Full Download - Ckau Book PixN.bat" -O "Full Download - Ckau Book PixN.bat" >nul 2>&1
-wget https://raw.githubusercontent.com/RGS-MBU/PixN-Tools/main/gitconfig -O gitconfig >nul 2>&1
+wget "https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/Full Download - Hypermax Plus PixN.bat" -O "Full Download - Hypermax Plus PixN.bat" >nul 2>&1
+wget "https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/Full Download - Alekfull-ARTFLIX-PixN.bat" -O "Full Download - Alekfull-ARTFLIX-PixN.bat" >nul 2>&1
+wget "https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/Full Download - Carbon-PixN.bat" -O "Full Download - Carbon-PixN.bat" >nul 2>&1
+wget "https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/Full Download - Ckau Book PixN.bat" -O "Full Download - Ckau Book PixN.bat" >nul 2>&1
+wget https://raw.githubusercontent.com/PixelNostalgia/PixN-RB-Update-Service/main/gitconfig -O gitconfig >nul 2>&1
 move /Y gitconfig .\PortableGit\etc\gitconfig >nul 2>&1
 
 echo .
