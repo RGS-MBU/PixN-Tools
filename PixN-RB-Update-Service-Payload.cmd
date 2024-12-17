@@ -20,7 +20,7 @@ type ASCII.txt
 
 echo .
 echo Pixel Nostalgia updater running...
-echo Version 1.17
+echo Version 1.18
 echo .
 ping -n 2 127.0.0.1 > nul
 
@@ -266,6 +266,32 @@ del /Q teknoparrot_nov2024.7z
 rmdir /S /Q teknoparrot >nul 2>&1
 
 echo TeknoParrot-v2 > TeknoParrot-v2
+:skip
+echo .
+ping -n 2 127.0.0.1 > nul
+
+REM This section checks for the updated Virtual Pinball Emulator...
+echo Checking for the updated Virtual Pinball Emulator...
+echo .
+ping -n 2 127.0.0.1 > nul
+
+IF EXIST "VPinball-v1" goto SKIP
+
+del /Q T1RjgvCj*.* >nul 2>&1
+wget https://pixeldrain.com/api/filesystem/T1RjgvCj
+ren T1RjgvCj vpinball_dec2024.7z
+ping -n 2 127.0.0.1 > nul
+echo .
+7z x vpinball_dec2024.7z -aoa -p22446688 -o.\
+md ..\..\emulators\vpinball >nul 2>&1
+echo .
+echo Copying files...
+xcopy vpinball ..\..\emulators\vpinball\ /S /E /I /Q /H /Y /R
+ping -n 2 127.0.0.1 > nul
+del /Q vpinball_dec2024.7z
+rmdir /S /Q vpinball >nul 2>&1
+
+echo VPinball-v1 > VPinball-v1
 :skip
 echo .
 ping -n 2 127.0.0.1 > nul
