@@ -1,9 +1,27 @@
 ﻿#EXTM3U
 #EXTINF:1041,Retro Games Saviour [RGS] - RGS
-http://50.199.72.237:4040/ext/stream?player=1&id=2&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9MiZzdWZmaXg9Lm1wMyIsImV4cCI6MTcyODM5OTA4OX0.-58kC_t-a_EpEJzxGfqWDqTvyp5JAgBFEr2NRaD1nMo
+http://50.199.72.237:4040/ext/stream?player=1&id=2&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9MiZzdWZmaXg9Lm1wMyIsImV4cCI6MTczOTcxNjczOX0.uoEKszXWS1BIZKHEZ1uWlOAkQC9lcjdQjdnDIIEGhCM
 #EXTINF:152,null - Pixel Nostalgia
-http://50.199.72.237:4040/ext/stream?player=1&id=4&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9NCZzdWZmaXg9Lm1wMyIsImV4cCI6MTcyODM5OTA4OX0.xWWnV2iuC7FB6nTdrw0b7M6YfUtXYsEtuHaCZhLM5TI
+http://50.199.72.237:4040/ext/stream?player=1&id=4&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9NCZzdWZmaXg9Lm1wMyIsImV4cCI6MTczOTcxNjczOX0.21-u03YBzPMb0XHu9U4x04dcf-OcTrQKfN8vipP0VAc
 #EXTINF:293,DeAdLy_cOoKiE - Amiga - Pinball Dreams
-http://50.199.72.237:4040/ext/stream?player=1&id=6&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9NiZzdWZmaXg9Lm1wMyIsImV4cCI6MTcyODM5OTA4OX0.NoSWmXJcQcDrOQdmCp1nAFm1kLOMbbQqvkfCY0-iEDE
+http://50.199.72.237:4040/ext/stream?player=1&id=6&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9NiZzdWZmaXg9Lm1wMyIsImV4cCI6MTczOTcxNjczOX0.6dya1jscnlH9OH0NMwS1-zYGOFJsAB6xtGvwR_K14wM
 #EXTINF:399,null - Amiga - Turrican 2 Main Title Remix
-http://50.199.72.237:4040/ext/stream?player=1&id=5&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9NSZzdWZmaXg9Lm1wMyIsImV4cCI6MTcyODM5OTA4OX0.TQVf954Jer6mrQ34TCMCcY-p_tS4yDf9OtgLwptwtOs
+http://50.199.72.237:4040/ext/stream?player=1&id=5&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9NSZzdWZmaXg9Lm1wMyIsImV4cCI6MTczOTcxNjczOX0.Dbpem_iExOljRo85VU7-p9UgIfbEk-5Yd-cw0BRBOwc
+#EXTINF:245,Amiga - Blood Money - Intro
+http://50.199.72.237:4040/ext/stream?player=1&id=7&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9NyZzdWZmaXg9Lm1wMyIsImV4cCI6MTczOTcxNjczOX0.r_GGlEeOaaC4ktry82chWslnT8oPh-qIjTxKIEWSwH4
+#EXTINF:357,Amiga - Jaguar XJ 220 - Moody Breeze
+http://50.199.72.237:4040/ext/stream?player=1&id=11&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9MTEmc3VmZml4PS5tcDMiLCJleHAiOjE3Mzk3MTY3Mzl9.XJPIjXT_JQU5B66E-fm0mtac4BrixgmFDSdFj3-vbkk
+#EXTINF:359,Amiga - Lost Patrol - Theme
+http://50.199.72.237:4040/ext/stream?player=1&id=13&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9MTMmc3VmZml4PS5tcDMiLCJleHAiOjE3Mzk3MTY3Mzl9.QdX-2aL0St-0yuiD6KuTmgTjQSVyOyEXivh9chrSt6s
+#EXTINF:459,Amiga - Obliterator - InGame Music
+http://50.199.72.237:4040/ext/stream?player=1&id=14&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9MTQmc3VmZml4PS5tcDMiLCJleHAiOjE3Mzk3MTY3Mzl9.PtNm5LCSER5gZxbEciqdhlJHLEAFsOYDdnZ5XSqrtKg
+#EXTINF:175,Amiga - Platoon - Title Music
+http://50.199.72.237:4040/ext/stream?player=1&id=8&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9OCZzdWZmaXg9Lm1wMyIsImV4cCI6MTczOTcxNjczOX0.HkNtjMpR6pI6Nz__joJvp0seZnA4csROuyZlc0u4zMc
+#EXTINF:173,Amiga - Shadow of the Beast 2 - Start
+http://50.199.72.237:4040/ext/stream?player=1&id=15&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9MTUmc3VmZml4PS5tcDMiLCJleHAiOjE3Mzk3MTY3Mzl9.sOoVRqACcSzSruzMjhADF_ZMLXNe1qgJCQbkWXAhpy8
+#EXTINF:149,C64 - Break Thru - Theme
+http://50.199.72.237:4040/ext/stream?player=1&id=12&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9MTImc3VmZml4PS5tcDMiLCJleHAiOjE3Mzk3MTY3Mzl9.ppxyOtG0BeThnzx7NlFQP0zH8Sx1ZRikdZzlo2U1IuU
+#EXTINF:184,C64 - Rambo First Blood Part II - Theme
+http://50.199.72.237:4040/ext/stream?player=1&id=9&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9OSZzdWZmaXg9Lm1wMyIsImV4cCI6MTczOTcxNjczOX0.J548MNtmtTAWKT8JKXbd5oWazP4ETkcDR5ka_FHT8_s
+#EXTINF:156,Amiga - Gods - Title Screen
+http://50.199.72.237:4040/ext/stream?player=1&id=10&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9MTAmc3VmZml4PS5tcDMiLCJleHAiOjE3Mzk3MTY3Mzl9.4RVn-Ra885LZWv8gTzH0h0zvXBG02TfTsRczYPktAmg
