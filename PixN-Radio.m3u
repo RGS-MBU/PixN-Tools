@@ -1,13 +1,9 @@
-/music/RGS.mp3
-/music/Pixel Nostalgia.mp3
-/music/Amiga - Pinball Dreams.mp3
-/music/Amiga - Turrican 2 Main Title Remix.mp3
-/music/Amiga - Blood Money - Intro.mp3
-/music/Amiga - Jaguar XJ 220 - Moody Breeze.mp3
-/music/Amiga - Lost Patrol - Theme.mp3
-/music/Amiga - Obliterator - InGame Music.mp3
-/music/Amiga - Platoon - Title Music.mp3
-/music/Amiga - Shadow of the Beast 2 - Start.mp3
-/music/C64 - Break Thru - Theme.mp3
-/music/C64 - Rambo First Blood Part II - Theme.mp3
-/music/Amiga - Gods - Title Screen.mp3
+﻿#EXTM3U
+#EXTINF:1041,Retro Games Saviour [RGS] - RGS
+http://50.199.72.237:4040/ext/stream?player=1&id=2&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9MiZzdWZmaXg9Lm1wMyIsImV4cCI6MTcyODM5OTA4OX0.-58kC_t-a_EpEJzxGfqWDqTvyp5JAgBFEr2NRaD1nMo
+#EXTINF:152,null - Pixel Nostalgia
+http://50.199.72.237:4040/ext/stream?player=1&id=4&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9NCZzdWZmaXg9Lm1wMyIsImV4cCI6MTcyODM5OTA4OX0.xWWnV2iuC7FB6nTdrw0b7M6YfUtXYsEtuHaCZhLM5TI
+#EXTINF:293,DeAdLy_cOoKiE - Amiga - Pinball Dreams
+http://50.199.72.237:4040/ext/stream?player=1&id=6&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9NiZzdWZmaXg9Lm1wMyIsImV4cCI6MTcyODM5OTA4OX0.NoSWmXJcQcDrOQdmCp1nAFm1kLOMbbQqvkfCY0-iEDE
+#EXTINF:399,null - Amiga - Turrican 2 Main Title Remix
+http://50.199.72.237:4040/ext/stream?player=1&id=5&suffix=.mp3&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXRoIjoiL2V4dC9zdHJlYW0_cGxheWVyPTEmaWQ9NSZzdWZmaXg9Lm1wMyIsImV4cCI6MTcyODM5OTA4OX0.TQVf954Jer6mrQ34TCMCcY-p_tS4yDf9OtgLwptwtOs
